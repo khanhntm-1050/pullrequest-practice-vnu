@@ -1,9 +1,8 @@
-   
 class Menu
   attr_accessor :name
   attr_accessor :price
   
-  def initialize(name:, price:)
+  def initialize(name, price)
     self.name = name
     self.price = price
   end
@@ -14,11 +13,12 @@ class Menu
 end
 
 #メニューの変数を定義してください
-menu1 = 
-menu2 = 
-menu3 = 
-
+menu1 = Menu.new('Pho', 30000) 
+menu2 = Menu.new('Banh mi', 20000)
+menu3 = Menu.new('Bun cha', 40000)
 # 変数menusを定義して配列を代入してください
 
+menus = [menu1, menu2, menu3]
 
 # menusに対して繰り返し処理を実行してください
+menus.each { |menu| puts menu.info() }
