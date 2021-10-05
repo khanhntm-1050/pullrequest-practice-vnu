@@ -39,9 +39,7 @@ drink2 = Drink.new(name: "Coca", price: 20000, size: 'XL')
 menus = [menu1, menu2, menu3, drink1, drink2]
 
 menus.each_with_index do |menu, index|
-  puts "#{index}. " + menu.info
+  puts "#{index + 1}. " + menu.info
 end
 
-selected_index = gets.to_i
 
-p menus[selected_index]
