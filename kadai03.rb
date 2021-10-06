@@ -5,7 +5,7 @@ year = gets.to_i #gets(標準入力)
 
 if year <= 1895
     puts "「#{year}年にオリンビックはまだありません」"
-elsif year == 1916 && year == 1940 && year == 1944 && year == 2020
+elsif year == 1916 || year == 1940 || year == 1944 || year == 2020
     puts "「#{year}年にオリンビックは開催されませんでした」"
 elsif year % 4 == 0
     puts "「#{year}年にオリンビックは開催されました」"

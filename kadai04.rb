@@ -22,7 +22,7 @@ puts "第1~10回大会のオリンピック一覧"
 
 olympics.each do |olympic|
     puts "#{olympic[:year]}年#{olympic[:city]}大会"
-    puts "豆知識: #{olympic[:note]}"
+    puts "豆知識: #{olympic[:note]}" if olympic[:note]
 end
 
 # 豆知識がある場合のみ豆知識について出力してください
