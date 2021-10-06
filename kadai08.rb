@@ -43,8 +43,16 @@ class Menu
   menus.each_with_index do |menu, index|
     puts "#{index}. #{menu.info}"
   end
-  while 1
-      order = gets.to_i
-  end
+   
+  puts "メニューの番号を選択してください"
+  order = gets.to_i
+  
+  selected_menu = menus[selected_index]
+  order = gets.to_i
+
+  selected_menu = menus[order]
+
+  if selected_menu == nil
+    puts "選択されたキーは無効です。"
   
   
