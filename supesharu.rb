@@ -39,7 +39,20 @@ drink2 = Drink.new(name: "Coca", price: 20000, size: 'XL')
 menus = [menu1, menu2, menu3, drink1, drink2]
 
 menus.each_with_index do |menu, index|
-  puts "#{index + 1}. " + menu.info
+  puts "#{index}. " + menu.info
 end
 
+puts "-----------------"
+puts "メニューの番号を選択してください"
 
+order = gets.to_i
+
+selected_menu = menus[order]
+
+if selected_menu == nil
+  puts "選択されたキーは無効です。"
+  exit(1)
+end
+
+puts "選択されたメニュー:#{selected_menu.name}"
+puts "お会計は#{selected_menu.price}です"
