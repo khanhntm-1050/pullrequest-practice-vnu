@@ -42,9 +42,12 @@ menus.each_with_index do |menu, index|
   puts "#{index}. " + menu.info
 end
 
-selected_index = gets.to_i
+puts "-----------------"
+puts "メニューの番号を選択してください"
 
-selected_menu = menus[selected_index]
+order = gets.to_i
+
+selected_menu = menus[order]
 
 if selected_menu == nil
   puts "選択されたキーは無効です。"
