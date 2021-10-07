@@ -39,6 +39,15 @@ drink2 = Drink.new(name:"Trà", price: 25000, size: "L")
 
 menus= [menu1, menu2, menu3, drink1, drink2]
 
-menus.each do |menu|
-  puts menu.info
+menus.each_with_index do |menu, index|
+  puts "#{index}. #{menu.info}"
 end
+
+puts "------------"
+puts "メニューの番号を選択してください"
+
+order = gets.to_i
+selected_menu = menus[order]
+
+puts "選択されたメニュー：#{selected_menu.name}"
+puts "お合計は#{selected_menu.price}です"
