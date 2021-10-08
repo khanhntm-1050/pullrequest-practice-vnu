@@ -1,7 +1,7 @@
 class Menu
   attr_accessor :name
   attr_accessor :price
-  
+
   def initialize(name:, price:)
     self.name = name
     self.price = price
@@ -42,6 +42,13 @@ menus.append(menu3)
 menus.append(drink1)
 menus.append(drink2)
 
-menus.each do |menu|
-  puts menu.info
+menus.each_with_index do |menu, index|
+  puts "#{index}. #{menu.info}"
 end
+
+puts "================================================================"
+puts "メニューの番号を選択してください"
+order = gets.to_i
+selected_menu = menus[order]
+puts "選択されたメニュー: #{selected_menu.name}"
+puts "お会計は#{selected_menu.price}vndです"
